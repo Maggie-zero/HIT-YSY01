@@ -98,7 +98,7 @@
             >Create an account</a>
           </p>
 
-          <p class="text-sm text-gray-500 mt-12">&copy;范成磊团队人员 2024 MYing实验室</p>
+          <p class="text-sm text-gray-500 mt-12">&copy;2024 于思源团队 MYing实验室</p>
         </el-form>
       </div>
     </div>
