@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "types": ["element-plus/global"],
+    "baseUrl": "./",
+    "paths":{
+      "@/*": ["src/*"]
+    },
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
