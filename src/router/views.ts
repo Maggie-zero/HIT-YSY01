@@ -79,6 +79,35 @@ export default [
         },
         component: () => import('@/view/research/hologram/index.vue')
       },
+   
+      {
+        path: '/hologram1',
+        meta: {
+          level: 1,
+          title: '卫星运转',
+          icon: 'Aim'
+        },
+        component: () => import('@/view/research/satellite/index.vue')
+      },
+      {
+        path: '/hologram2',
+        meta: {
+          level: 1,
+          title: '卫星轨道运转',
+          icon: 'Aim'
+        },
+        component: () => import('@/view/research/satellite2/index.vue')
+      },
+    
+      {
+        path: '/hologram3',
+        meta: {
+          level: 1,
+          title: '卫星多轨道运行',
+          icon: 'Aim'
+        },
+        component: () => import('@/view/research/satellite3/index.vue')
+      },
     ]
   },
   // 战略模式示例
@@ -104,6 +133,7 @@ export default [
         },
         component: () => import('@/view/strategy/op_record/index.vue')
       },
+     
     ]
   },
 ]

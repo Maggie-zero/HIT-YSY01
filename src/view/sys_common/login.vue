@@ -17,7 +17,7 @@
       "
     >
       <div class="w-full h-100">
-        <h1 class="text-xl md:text-5xl font-bold leading-tight mt-2">AI+框架技术实验室</h1>
+        <h1 class="text-xl md:text-5xl font-bold leading-tight mt-2">AI+激光通讯卫星链路系统平台</h1>
 
         <el-form class="mt-6" ref="form" :rules="rules" :model="formInline">
           <el-form-item prop="username">
