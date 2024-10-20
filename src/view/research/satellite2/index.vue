@@ -155,10 +155,10 @@ onMounted(async () => {
     },
     //模型
     model: {
-      uri: "src/assets/image/Mars Reconnaissance Orbiter.glb", //卫星
+      uri: "src/assets/image/sate222.glb", //卫星
       scale: 2, //设置模型的比例
-      minimumPixelSize: 1700,
-      maximumScale: 17000
+      minimumPixelSize: 170,
+      maximumScale: 1700
     },
 
     path: {

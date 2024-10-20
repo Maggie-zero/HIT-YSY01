@@ -155,7 +155,7 @@ onMounted(async () => {
     },
     //模型
     model: {
-      uri: "src/assets/image/Cesium_Air.glb", //卫星
+      uri: "src/assets/image/sate222.glb", //飞机
       scale: 2, //设置模型的比例
       minimumPixelSize: 1700,
       maximumScale: 17000
