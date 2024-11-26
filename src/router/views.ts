@@ -24,6 +24,54 @@ export default [
   },
   // 生产模式示例
   {
+    path: '/link',
+    component: Layout,
+    name: 'link',
+    meta: {
+      level: 0,
+      type: "Production",
+      isSideBar: true,
+      title: '链路冗余评估组件',
+      icon: 'Iphone'
+    },
+    redirect: { path: '/link' },
+    children: [
+      {
+        path: '/link',
+        meta: {
+          level: 1,
+          title: '系统',
+          icon: 'stopwatch'
+        },
+        component: () => import('@/view/product/link-redundancy/index.vue')
+      },
+    ]
+  },
+  {
+    path: '/link2',
+    component: Layout,
+    name: 'link2',
+    meta: {
+      level: 0,
+      type: "Production",
+      isSideBar: true,
+      title: '链路场景评估组件',
+      icon: 'Iphone'
+    },
+    redirect: { path: '/link2' },
+    children: [
+      {
+        path: '/link2',
+        meta: {
+          level: 1,
+          title: '系统',
+          icon: 'stopwatch'
+        },
+        component: () => import('@/view/product/link-scene/index.vue')
+      },
+    ]
+  },
+  {
     path: '/pro1',
     component: Layout,
     name: 'pro1',
