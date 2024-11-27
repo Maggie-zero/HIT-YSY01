@@ -7,12 +7,12 @@
           <div class="h-[90%] w-full flex">
             <div class="flex flex-col w-[70%] h-[90%] p-2">
               <div
-                class="flex flex-col w-[95%] h-[90%] p-2 bg-stone-50"
+                class="flex flex-col w-[95%] h-[90%] p-2"
                 :key="item.name"
                 v-for="item in full_para.filter((items) => items.group == 'first')"
               >
                 <div class="py-1 flex justify-between w-full">
-                  <div class="w-[30%]">{{ item.name }}:</div>
+                  <div class="w-[30%] text-xl pl-4">{{ item.label }}:</div>
                   <div class="w-[50%]">
                     <component
                       class="w-full"
@@ -31,19 +31,19 @@
                 </div>
               </div>
             </div>
-            <div class="flex flex-col w-[25%] h-[80%] p-2 justify-center">
-              <el-button @click="calcu">计算</el-button>
+            <div class="flex flex-col w-[25%] h-[80%] p-2 justify-center text-xl">
+              <el-button @click="calcu" class="text-xl">计算</el-button>
             </div>
           </div>
         </div>
       </div>
       <div class="w-[99%] h-[64%] pt-1">
-        <div class="h-[95%] w-[99%] border-t-0 border-2 pt--1">
+        <div class="h-[95%] w-[98%] border-t-0 border-2 pt--1">
           <el-divider content-position="left">结果模块</el-divider>
           <div class="h-[95%] w-full p-2">
             <div class="w-[60%] h-[10%] pl-20 flex justify-between">
               <div class="text-2xl">链路冗余（dB）:</div>
-              <div class="bg-stone-50 text-2xl pl-2 w-1/3">123</div>
+              <div class="bg-stone-50 text-2xl pl-2 w-1/3">{{ state.redundancy }}</div>
             </div>
             <div class="w-[90%] h-[90%] p-5">
               <component ref="mainChart" :is="Echart" class="h-full w-full" />
@@ -52,17 +52,17 @@
         </div>
       </div>
     </div>
-    <div class="h-[99%] w-[30%] flex flex-col p-1">
+    <div class="h-[99%] w-[35%] flex flex-col p-1">
       <div class="w-[99%] h-[99%] pt-1">
         <div class="w-[99%] h-[98%] border-t-0 border-2 pt--1">
           <el-divider content-position="left">参数输入</el-divider>
           <div
-            class="flex-col w-[99%] h-[7%] p-1 overflow-auto"
+            class="flex-col w-[99%] h-[7%] p-2 overflow-auto"
             :key="item.name"
             v-for="item in full_para.filter((items) => items.group == 'third')"
           >
-            <div class="flex w-full overflow-hidden">
-              <div class="w-[50%] text-l">{{ item.name }}:</div>
+            <div class="flex w-full pl-2 overflow-hidden">
+              <div class="w-[50%] text-xl">{{ item.label }}</div>
               <div class="w-[30%]">
                 <component
                   class="w-full"
@@ -78,13 +78,13 @@
                   ></el-option>
                 </component>
               </div>
-              <div class="w-[20%] pl-2">{{ item.unit }}</div>
+              <div class="w-[20%] pl-3">{{ item.unit }}</div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="h-[99%] w-[30%] flex flex-col p-1">
+    <div class="h-[99%] w-[25%] flex flex-col p-1">
       <div class="w-[99%] h-[99%] pt-1">
         <div class="w-[99%] h-[98%] border-t-0 border-2 pt--1">
           <el-divider content-position="left">过程参数显示</el-divider>
@@ -93,9 +93,9 @@
             :key="item.name"
             v-for="item in full_para.filter((items) => items.group == 'fourth')"
           >
-            <div class="py-1 flex w-full overflow-hidden">
-              <div class="w-[50%] text-xl">{{ item.name }}:</div>
-              <div class="w-[30%]">
+            <div class="py-1 flex w-full pl-4 overflow-hidden">
+              <div class="w-[50%] text-xl">{{ item.label }}:</div>
+              <div class="w-[30%] pl-3">
                 <component
                   class="w-full"
                   v-model="state.para[item.name]"
@@ -126,11 +126,13 @@ import { full_para } from "./interface";
 
 const mainChart = ref();
 const state = reactive({
-  para: {} as any
+  para: {} as any,
+  redundancy: 0
 });
 
 const calcu = () => {
   mainChart.value.update(test1Gen(data));
+  state.redundancy = 3.34;
 };
 
 const paraInit = (para: any) => {

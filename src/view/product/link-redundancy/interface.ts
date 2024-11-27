@@ -1,8 +1,8 @@
 // export const 
 export const full_para = [
   {
-    name: "关键指标",
-    label: "X",
+    name: "choose1",
+    label: "关键指标",
     default: 0,
     group: "first",
     type: "ElSelect",
@@ -46,8 +46,8 @@ export const full_para = [
     ]
   },
   {
-    name: "链路选择",
-    label: "Y",
+    name:"choose2", 
+    label:"链路选择",
     default: 1,
     group: "first",
     type: "ElSelect",
@@ -67,8 +67,8 @@ export const full_para = [
     ]
   },
   {
-    name: "有无信标",
-    label: "Z",
+    name: "choose3",
+    label: "有无信标",
     default: 1,
     group: "first",
     type: "ElSelect",
@@ -91,101 +91,101 @@ export const full_para = [
 
 
   {
-    name: "参数1：信标光源发射功率",
-    label: "测试1值",
+    name: "input1",
+    label: "参数1:信标光源发射功率", 
     default: 10,
     group: "third",
     type: "ElInput",
     unit: "dBmW"
   },
   {
-    name: "参数2：信号光源发射功率",
-    label: "测试2值",
+    name: "input2",
+    label: "参数2:信号光源发射功率",
     default: 20,
     group: "third",
     type: "ElInput",
     unit: "dBmW"
   },
   {
-    name: "参数3：信标发射光束束散角",
-    label: "测试3值",
+    name: "input3",
+    label: "参数3:信标发射光束束散角",
     default: 30,
     group: "third",
     type: "ElInput",
     unit: "urad"
   },
   {
-    name: "参数4：信号发射光束束散角",
-    label: "测试4值",
+    name: "input4",
+    label:  "参数4:信号发射光束束散角",
     default: 40,
     group: "third",
     type: "ElInput",
     unit: "urad"
   },
   {
-    name: "参数5：接收天线口径",
-    label: "测试5值",
+    name: "input5",
+    label: "参数5:接收天线口径",
     default: 50,
     group: "third",
     type: "ElInput",
     unit: "mm"
   },
   {
-    name: "参数6：信标光波长",
-    label: "测试6值",
+    name: "input6",
+    label: "参数6:信标光波长",
     default: 60,
     group: "third",
     type: "ElInput",
     unit: "nm"
   },
   {
-    name: "参数7：信号光波长",
-    label: "测试7值",
+    name:"input7", 
+    label: "参数7:信号光波长",
     default: 70,
     group: "third",
     type: "ElInput",
     unit: "nm"
   },
   {
-    name: "参数8：发射透过率",
-    label: "测试8值",
+    name: "input8",
+    label:"参数8:发射透过率",
     default: 0.80,
     group: "third",
     type: "ElInput"
   },
   {
-    name: "参数9：接收透过率",
-    label: "测试9值",
+    name: "input9",
+    label: "参数9:接收透过率",
     default: 0.90,
     group: "third",
     type: "ElInput"
   },
   {
-    name: "参数10：分光比（APD）",
-    label: "测试10值",
+    name: "input10",
+    label: "参数10:分光比(APD)",
     default: 100,
     group: "third",
     type: "ElInput"
   },
   {
-    name: "参数11：链路距离",
-    label: "测试11值",
+    name: "input11", 
+    label: "参数11:链路距离",
     default: 1180,
     group: "third",
     type: "ElInput",
     unit: "km"
   },
   {
-    name: "参数12：相机探测模块灵敏度",
-    label: "测试12值",
+    name: "input12",
+    label: "参数12:相机探测模块灵敏度",
     default: 120,
     group: "third",
     type: "ElInput",
     unit: "dBmW"
   },
   {
-    name: "参数13：APD探测模块灵敏度",
-    label: "测试13值",
+    name: "input13",
+    label: "参数13:APD探测模块灵敏度",
     default: 130,
     group: "third",
     type: "ElInput",
@@ -195,56 +195,56 @@ export const full_para = [
 
 
   {
-    name: "发射天线增益",
-    label: "结果1",
+    name: "display1",
+    label: "发射天线增益",
     default: '',
     group: "fourth",
     type: "ElInput",
     
   },
   {
-    name: "接收天线增益",
-    label: "结果2",
+    name: "display2",
+    label: "接收天线增益",
     default: '',
     group: "fourth",
     type: "ElInput",
    
   },
   {
-    name: "发射光路损耗",
-    label: "结果3",
+    name:"display3", 
+    label:"发射光路损耗",
     default: '',
     group: "fourth",
     type: "ElInput",
     
   },
   {
-    name: "接收光路损耗",
-    label: "结果4",
+    name: "display4",
+    label: "接收光路损耗",
     default: '',
     group: "fourth",
     type: "ElInput",
    
   },
   {
-    name: "自由空间传输损耗",
-    label: "结果5",
+    name: "display5",
+    label: "自由空间传输损耗",
     default: '',
     group: "fourth",
     type: "ElInput",
    
   },
   {
-    name: "最大瞄准误差",
-    label: "结果6",
+    name: "display6",
+    label: "最大瞄准误差",
     default: '',
     group: "fourth",
     type: "ElInput",
    
   },
   {
-    name: "瞄准损耗",
-    label: "结果47",
+    name: "display7",
+    label: "瞄准损耗",
     default: '',
     group: "fourth",
     type: "ElInput",
