@@ -42,7 +42,7 @@
           <el-divider content-position="left">结果模块</el-divider>
           <div class="h-[95%] w-full p-2">
             <div class="w-[60%] h-[10%] pl-20 flex justify-between">
-              <div class="text-2xl">链路冗余（dB）:</div>
+              <div class="text-2xl">链路冗余(dB):</div>
               <div class="bg-stone-50 text-2xl pl-2 w-1/3">{{ state.redundancy }}</div>
             </div>
             <div class="w-[90%] h-[90%] p-5">

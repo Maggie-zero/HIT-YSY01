@@ -92,7 +92,7 @@ export const full_para = [
 
   {
     name: "input1",
-    label: "参数1:信标光源发射功率", 
+    label: "信标光源发射功率", 
     default: 10,
     group: "third",
     type: "ElInput",
@@ -100,7 +100,7 @@ export const full_para = [
   },
   {
     name: "input2",
-    label: "参数2:信号光源发射功率",
+    label: "信号光源发射功率",
     default: 20,
     group: "third",
     type: "ElInput",
@@ -108,7 +108,7 @@ export const full_para = [
   },
   {
     name: "input3",
-    label: "参数3:信标发射光束束散角",
+    label: "信标发射光束束散角",
     default: 30,
     group: "third",
     type: "ElInput",
@@ -116,7 +116,7 @@ export const full_para = [
   },
   {
     name: "input4",
-    label:  "参数4:信号发射光束束散角",
+    label: "信号发射光束束散角",
     default: 40,
     group: "third",
     type: "ElInput",
@@ -124,7 +124,7 @@ export const full_para = [
   },
   {
     name: "input5",
-    label: "参数5:接收天线口径",
+    label: "接收天线口径",
     default: 50,
     group: "third",
     type: "ElInput",
@@ -132,7 +132,7 @@ export const full_para = [
   },
   {
     name: "input6",
-    label: "参数6:信标光波长",
+    label: "信标光波长",
     default: 60,
     group: "third",
     type: "ElInput",
@@ -140,7 +140,7 @@ export const full_para = [
   },
   {
     name:"input7", 
-    label: "参数7:信号光波长",
+    label: "信号光波长",
     default: 70,
     group: "third",
     type: "ElInput",
@@ -148,28 +148,28 @@ export const full_para = [
   },
   {
     name: "input8",
-    label:"参数8:发射透过率",
+    label:"发射透过率",
     default: 0.80,
     group: "third",
     type: "ElInput"
   },
   {
     name: "input9",
-    label: "参数9:接收透过率",
+    label: "接收透过率",
     default: 0.90,
     group: "third",
     type: "ElInput"
   },
   {
     name: "input10",
-    label: "参数10:分光比(APD)",
+    label: "分光比(APD)",
     default: 100,
     group: "third",
     type: "ElInput"
   },
   {
     name: "input11", 
-    label: "参数11:链路距离",
+    label: "链路距离",
     default: 1180,
     group: "third",
     type: "ElInput",
@@ -177,7 +177,7 @@ export const full_para = [
   },
   {
     name: "input12",
-    label: "参数12:相机探测模块灵敏度",
+    label: "相机探测模块灵敏度",
     default: 120,
     group: "third",
     type: "ElInput",
@@ -185,7 +185,7 @@ export const full_para = [
   },
   {
     name: "input13",
-    label: "参数13:APD探测模块灵敏度",
+    label: "APD探测模块灵敏度",
     default: 130,
     group: "third",
     type: "ElInput",
