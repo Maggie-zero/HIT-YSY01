@@ -71,174 +71,175 @@ export default [
       },
     ]
   },
-  {
-    path: '/pro1',
-    component: Layout,
-    name: 'pro1',
-    meta: {
-      level: 0,
-      type: "Production",
-      isSideBar: true,
-      title: '部件评测建模系统',
-      icon: 'Iphone'
-    },
-    redirect: { path: '/pro11' },
-    children: [
-      {
-        path: '/pro11',
-        meta: {
-          level: 1,
-          title: '系统',
-          icon: 'stopwatch'
-        },
-        component: () => import('@/view/product/pro1/index.vue')
-      },
-    ]
-  },
-  {
-    path: '/pro2',
-    component: Layout,
-    name: 'pro2',
-    meta: {
-      level: 0,
-      type: "Production",
-      isSideBar: true,
-      title: '远场等效测试系统',
-      icon: 'Iphone'
-    },
-    redirect: { path: '/pro21' },
-    children: [
-      {
-        path: '/pro21',
-        meta: {
-          level: 1,
-          title: '系统',
-          icon: 'stopwatch'
-        },
-        component: () => import('@/view/product/pro2/index.vue')
-      },
-    ]
-  },
-  {
-    path: '/pro3',
-    component: Layout,
-    name: 'pro3',
-    meta: {
-      level: 0,
-      type: "Production",
-      isSideBar: true,
-      title: '轨道设计仿真系统',
-      icon: 'Iphone'
-    },
-    redirect: { path: '/pro31' },
-    children: [
-      {
-        path: '/pro31',
-        meta: {
-          level: 1,
-          title: '系统1',
-          icon: 'stopwatch'
-        },
-        component: () => import('@/view/product/pro3/index.vue')
-      },
-    ]
-  },
-  {
-    path: '/pro4',
-    component: Layout,
-    name: 'pro4',
-    meta: {
-      level: 0,
-      type: "Production",
-      isSideBar: true,
-      title: '组网路由规划系统',
-      icon: 'Iphone'
-    },
-    redirect: { path: '/pro11' },
-    children: [
-      {
-        path: '/pro11',
-        meta: {
-          level: 1,
-          title: '系统',
-          icon: 'stopwatch'
-        },
-        component: () => import('@/view/product/pro4/index.vue')
-      },
-    ]
-  },
-  {
-    path: '/pro5',
-    component: Layout,
-    name: 'pro5',
-    meta: {
-      level: 0,
-      type: "Production",
-      isSideBar: true,
-      title: '空间环境模拟系统',
-      icon: 'Iphone'
-    },
-    redirect: { path: '/pro51' },
-    children: [
-      {
-        path: '/pro51',
-        meta: {
-          level: 1,
-          title: '系统',
-          icon: 'stopwatch'
-        },
-        component: () => import('@/view/product/pro1/index.vue')
-      },
-    ]
-  },
-  {
-    path: '/pro6',
-    component: Layout,
-    name: 'pro6',
-    meta: {
-      level: 0,
-      type: "Production",
-      isSideBar: true,
-      title: '在轨运维控制系统',
-      icon: 'Iphone'
-    },
-    redirect: { path: '/pro61' },
-    children: [
-      {
-        path: '/pro61',
-        meta: {
-          level: 1,
-          title: '系统',
-          icon: 'stopwatch'
-        },
-        component: () => import('@/view/product/pro6/index.vue')
-      },
-    ]
-  },
-  {
-    path: '/pro7',
-    component: Layout,
-    name: 'pro7',
-    meta: {
-      level: 0,
-      type: "Production",
-      isSideBar: true,
-      title: '中央监控调度系统',
-      icon: 'Iphone'
-    },
-    redirect: { path: '/pro71' },
-    children: [
-      {
-        path: '/pro71',
-        meta: {
-          level: 1,
-          title: '系统',
-          icon: 'stopwatch'
-        },
-        component: () => import('@/view/product/pro7/index.vue')
-      },
-    ]
-  },
+
+  // {
+  //   path: '/pro1',
+  //   component: Layout,
+  //   name: 'pro1',
+  //   meta: {
+  //     level: 0,
+  //     type: "Production",
+  //     isSideBar: true,
+  //     title: '部件评测建模系统',
+  //     icon: 'Iphone'
+  //   },
+  //   redirect: { path: '/pro11' },
+  //   children: [
+  //     {
+  //       path: '/pro11',
+  //       meta: {
+  //         level: 1,
+  //         title: '系统',
+  //         icon: 'stopwatch'
+  //       },
+  //       component: () => import('@/view/product/pro1/index.vue')
+  //     },
+  //   ]
+  // },
+  // {
+  //   path: '/pro2',
+  //   component: Layout,
+  //   name: 'pro2',
+  //   meta: {
+  //     level: 0,
+  //     type: "Production",
+  //     isSideBar: true,
+  //     title: '远场等效测试系统',
+  //     icon: 'Iphone'
+  //   },
+  //   redirect: { path: '/pro21' },
+  //   children: [
+  //     {
+  //       path: '/pro21',
+  //       meta: {
+  //         level: 1,
+  //         title: '系统',
+  //         icon: 'stopwatch'
+  //       },
+  //       component: () => import('@/view/product/pro2/index.vue')
+  //     },
+  //   ]
+  // },
+  // {
+  //   path: '/pro3',
+  //   component: Layout,
+  //   name: 'pro3',
+  //   meta: {
+  //     level: 0,
+  //     type: "Production",
+  //     isSideBar: true,
+  //     title: '轨道设计仿真系统',
+  //     icon: 'Iphone'
+  //   },
+  //   redirect: { path: '/pro31' },
+  //   children: [
+  //     {
+  //       path: '/pro31',
+  //       meta: {
+  //         level: 1,
+  //         title: '系统1',
+  //         icon: 'stopwatch'
+  //       },
+  //       component: () => import('@/view/product/pro3/index.vue')
+  //     },
+  //   ]
+  // },
+  // {
+  //   path: '/pro4',
+  //   component: Layout,
+  //   name: 'pro4',
+  //   meta: {
+  //     level: 0,
+  //     type: "Production",
+  //     isSideBar: true,
+  //     title: '组网路由规划系统',
+  //     icon: 'Iphone'
+  //   },
+  //   redirect: { path: '/pro11' },
+  //   children: [
+  //     {
+  //       path: '/pro11',
+  //       meta: {
+  //         level: 1,
+  //         title: '系统',
+  //         icon: 'stopwatch'
+  //       },
+  //       component: () => import('@/view/product/pro4/index.vue')
+  //     },
+  //   ]
+  // },
+  // {
+  //   path: '/pro5',
+  //   component: Layout,
+  //   name: 'pro5',
+  //   meta: {
+  //     level: 0,
+  //     type: "Production",
+  //     isSideBar: true,
+  //     title: '空间环境模拟系统',
+  //     icon: 'Iphone'
+  //   },
+  //   redirect: { path: '/pro51' },
+  //   children: [
+  //     {
+  //       path: '/pro51',
+  //       meta: {
+  //         level: 1,
+  //         title: '系统',
+  //         icon: 'stopwatch'
+  //       },
+  //       component: () => import('@/view/product/pro1/index.vue')
+  //     },
+  //   ]
+  // },
+  // {
+  //   path: '/pro6',
+  //   component: Layout,
+  //   name: 'pro6',
+  //   meta: {
+  //     level: 0,
+  //     type: "Production",
+  //     isSideBar: true,
+  //     title: '在轨运维控制系统',
+  //     icon: 'Iphone'
+  //   },
+  //   redirect: { path: '/pro61' },
+  //   children: [
+  //     {
+  //       path: '/pro61',
+  //       meta: {
+  //         level: 1,
+  //         title: '系统',
+  //         icon: 'stopwatch'
+  //       },
+  //       component: () => import('@/view/product/pro6/index.vue')
+  //     },
+  //   ]
+  // },
+  // {
+  //   path: '/pro7',
+  //   component: Layout,
+  //   name: 'pro7',
+  //   meta: {
+  //     level: 0,
+  //     type: "Production",
+  //     isSideBar: true,
+  //     title: '中央监控调度系统',
+  //     icon: 'Iphone'
+  //   },
+  //   redirect: { path: '/pro71' },
+  //   children: [
+  //     {
+  //       path: '/pro71',
+  //       meta: {
+  //         level: 1,
+  //         title: '系统',
+  //         icon: 'stopwatch'
+  //       },
+  //       component: () => import('@/view/product/pro7/index.vue')
+  //     },
+  //   ]
+  // },
 
   // 科研模式示例
   {

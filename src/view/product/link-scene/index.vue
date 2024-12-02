@@ -3,15 +3,19 @@
     <div class="h-[99%] w-[30%] flex flex-col justify-between p-1">
       <div class="w-[99%] h-[35%] pr-20">
         <div class="h-[94%] w-[98%] border-t-0 border-2 pt--1">
-          <el-divider content-position="left">飞机1坐标</el-divider>
+          <el-divider
+            content-position="left"
+            class="font-bold"
+            >飞机1坐标</el-divider
+          >
           <div class="h-[90%] w-full flex flex-col">
             <div
-              class="flex-col w-[99%] p-4"
+              class="flex-col w-full p-4"
               :key="item.name"
               v-for="item in full_para2.filter((items) => items.group == 'one')"
             >
               <div class="py-1 flex w-full overflow-hidden">
-                <div class="w-[50%] text-xl">{{ item.label }}:</div>
+                <div class="w-[50%] text-lg font-bold">{{ item.label }}:</div>
                 <div class="w-[30%]">
                   <component
                     class="w-full"
@@ -42,7 +46,7 @@
               v-for="item in full_para2.filter((items) => items.group == 'two')"
             >
               <div class="py-1 flex w-full overflow-hidden">
-                <div class="w-[50%] text-xl">{{ item.label }}:</div>
+                <div class="w-[50%] text-lg font-bold">{{ item.label }}:</div>
                 <div class="w-[30%]">
                   <component
                     class="w-full"
@@ -72,22 +76,24 @@
 
           <div class="w-[90%] h-[40%] pl-20 pt-3 flex justify-between">
             <div class="text-2xl">距离（km）:</div>
-            <div class="bg-stone-50 text-2xl pl-2 w-1/3">{{ state.distance }}</div>
+            <div class="bg-stone-50 text-2xl pl-2 w-1/3">
+              {{ state.distance }}
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="h-[99%] w-[40%] flex flex-col p-1 justify-between">
-      <div class="w-[99%] h-[60%] pr-20">
-        <div class="w-[99%] h-[98%] border-t-0 border-2 pt--1">
+    <div class="h-full w-[40%] flex flex-col p-1 justify-between">
+      <div class="w-full h-[60%] pr-20">
+        <div class="w-full h-[98%] border-t-0 border-2 pt--1">
           <el-divider content-position="left">编队飞行条件</el-divider>
           <div
-            class="flex-col w-[99%] h-[18%] p-1 overflow-auto j"
+            class="flex-col w-full h-[18%] p-1 overflow-auto j"
             :key="item.name"
             v-for="item in full_para2.filter((items) => items.group == 'three')"
           >
             <div class="flex w-full justify-around overflow-hidden">
-              <div class="w-[50%] text-xl">{{ item.label }}:</div>
+              <div class="w-[50%] text-lg font-bold">{{ item.label }}:</div>
               <div class="w-[30%]">
                 <component
                   class="w-full"
@@ -116,7 +122,7 @@
             v-for="item in full_para2.filter((items) => items.group == 'four')"
           >
             <div class="flex w-full justify-around overflow-hidden">
-              <div class="w-[50%] text-xl">{{ item.label }}:</div>
+              <div class="w-[50%] text-lg font-bold">{{ item.label }}:</div>
               <div class="w-[30%]">
                 <component
                   class="w-full"
@@ -146,10 +152,12 @@
               <div
                 class="flex flex-col w-[95%] h-[90%] pl-2"
                 :key="item.name"
-                v-for="item in full_para2.filter((items) => items.group == 'five')"
+                v-for="item in full_para2.filter(
+                  (items) => items.group == 'five'
+                )"
               >
                 <div class="py-1 flex justify-around w-full">
-                  <div class="w-[30%] text-xl">{{ item.label }}:</div>
+                  <div class="w-[30%] text-lg font-bold">{{ item.label }}:</div>
                   <div class="w-[50%]">
                     <component
                       class="w-full"
@@ -183,7 +191,7 @@
             v-for="item in full_para2.filter((items) => items.group == 'six')"
           >
             <div class="py-1 flex w-full justify-around overflow-hidden">
-              <div class="w-[50%] text-xl">{{ item.label }}:</div>
+              <div class="w-[50%] text-lg font-bold">{{ item.label }}:</div>
               <div class="w-[30%]">
                 <component
                   class="w-full"
@@ -211,11 +219,13 @@
               <div
                 class="flex-col w-[99%] p-4"
                 :key="item.name"
-                v-for="item in full_para2.filter((items) => items.group == 'seven')"
+                v-for="item in full_para2.filter(
+                  (items) => items.group == 'seven'
+                )"
               >
                 <div class="py-1 flex justify-between w-full">
-                  <div class="w-[50%] text-xl">{{ item.label }}:</div>
-                  <div class="w-[30%]">
+                  <div class="text-lg font-bold">{{ item.label }}:</div>
+                  <div class="">
                     <component
                       class="w-full"
                       v-model="state.para[item.name]"
@@ -233,7 +243,9 @@
                 </div>
               </div>
             </div>
-            <div class="flex flex-col w-[50%] h-[20%] pt-5 pl-32 justify-center">
+            <div
+              class="flex flex-col w-[50%] h-[20%] pt-5 pl-32 justify-center"
+            >
               <el-button @click="judge">判断</el-button>
             </div>
           </div>
@@ -251,7 +263,7 @@ import { full_para2 } from "./interface";
 const mainChart = ref();
 const state = reactive({
   para: {} as any,
-  distance: 0
+  distance: 0,
 });
 
 const calcu = () => {

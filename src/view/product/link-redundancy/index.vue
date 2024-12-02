@@ -1,7 +1,7 @@
 <template>
   <div class="h-full w-full p-2 flex">
-    <div class="h-[99%] w-[40%] flex flex-col justify-between p-2">
-      <div class="w-[99%] h-[35%]">
+    <div class="h-full w-[40%] flex flex-col justify-between p-2">
+      <div class="w-full h-[35%]">
         <div class="h-[94%] w-[98%] border-t-0 border-2 pt--1">
           <el-divider content-position="left">条件选择模块</el-divider>
           <div class="h-[90%] w-full flex">
@@ -9,10 +9,14 @@
               <div
                 class="flex flex-col w-[95%] h-[90%] p-2"
                 :key="item.name"
-                v-for="item in full_para.filter((items) => items.group == 'first')"
+                v-for="item in full_para.filter(
+                  (items) => items.group == 'first'
+                )"
               >
                 <div class="py-1 flex justify-between w-full">
-                  <div class="w-[30%] text-xl pl-4">{{ item.label }}:</div>
+                  <div class="w-[50%] text-lg font-bold pl-4">
+                    {{ item.label }}:
+                  </div>
                   <div class="w-[50%]">
                     <component
                       class="w-full"
@@ -31,8 +35,14 @@
                 </div>
               </div>
             </div>
-            <div class="flex flex-col w-[25%] h-[80%] p-2 justify-center text-xl">
-              <el-button @click="calcu" class="text-xl">计算</el-button>
+            <div
+              class="flex flex-col w-[25%] h-[80%] p-2 justify-center text-lg font-bold"
+            >
+              <el-button
+                @click="calcu"
+                class="text-lg font-bold"
+                >计算</el-button
+              >
             </div>
           </div>
         </div>
@@ -43,10 +53,16 @@
           <div class="h-[95%] w-full p-2">
             <div class="w-[60%] h-[10%] pl-20 flex justify-between">
               <div class="text-2xl">链路冗余(dB):</div>
-              <div class="bg-stone-50 text-2xl pl-2 w-1/3">{{ state.redundancy }}</div>
+              <div class="bg-stone-50 text-2xl pl-2 w-1/3">
+                {{ state.redundancy }}
+              </div>
             </div>
             <div class="w-[90%] h-[90%] p-5">
-              <component ref="mainChart" :is="Echart" class="h-full w-full" />
+              <component
+                ref="mainChart"
+                :is="Echart"
+                class="h-full w-full"
+              />
             </div>
           </div>
         </div>
@@ -62,7 +78,7 @@
             v-for="item in full_para.filter((items) => items.group == 'third')"
           >
             <div class="flex w-full pl-2 overflow-hidden">
-              <div class="w-[50%] text-xl">{{ item.label }}</div>
+              <div class="w-[50%] text-lg font-bold">{{ item.label }}</div>
               <div class="w-[30%]">
                 <component
                   class="w-full"
@@ -94,7 +110,7 @@
             v-for="item in full_para.filter((items) => items.group == 'fourth')"
           >
             <div class="py-1 flex w-full pl-4 overflow-hidden">
-              <div class="w-[50%] text-xl">{{ item.label }}:</div>
+              <div class="w-[50%] text-lg font-bold">{{ item.label }}:</div>
               <div class="w-[30%] pl-3">
                 <component
                   class="w-full"
@@ -127,7 +143,7 @@ import { full_para } from "./interface";
 const mainChart = ref();
 const state = reactive({
   para: {} as any,
-  redundancy: 0
+  redundancy: 0,
 });
 
 const calcu = () => {
@@ -341,7 +357,7 @@ const data = [
   [0.833735, 4.374394],
   [0.070095, 3.213817],
   [0.52707, 3.952681],
-  [0.116163, 3.129283]
+  [0.116163, 3.129283],
 ];
 
 const data2 = [
@@ -357,7 +373,7 @@ const data2 = [
   [0.138306, 4.58664],
   [0.247809, 3.476346],
   [0.64827, 3.585821],
-  [0.731209, 4.282233]
+  [0.731209, 4.282233],
 ];
 onMounted(() => {
   paraInit(full_para);
