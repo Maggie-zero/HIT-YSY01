@@ -1,6 +1,6 @@
 <template>
   <div class="h-full w-full p-2 flex">
-    <div class="h-full w-[40%] flex flex-col justify-between p-2">
+    <div class="h-[99%] w-[35%] flex flex-col justify-between p-2">
       <div class="w-full h-[35%]">
         <div class="h-[94%] w-[98%] border-t-0 border-2 pt--1">
           <el-divider content-position="left">条件选择模块</el-divider>
@@ -14,9 +14,7 @@
                 )"
               >
                 <div class="py-1 flex justify-between w-full">
-                  <div class="w-[50%] text-lg font-bold pl-4">
-                    {{ item.label }}:
-                  </div>
+                  <div class="w-[50%] text-lg font-bold pl-4">{{ item.label }}:</div>
                   <div class="w-[50%]">
                     <component
                       class="w-full"
@@ -35,14 +33,8 @@
                 </div>
               </div>
             </div>
-            <div
-              class="flex flex-col w-[25%] h-[80%] p-2 justify-center text-lg font-bold"
-            >
-              <el-button
-                @click="calcu"
-                class="text-lg font-bold"
-                >计算</el-button
-              >
+            <div class="flex flex-col w-[25%] h-[80%] p-2 justify-center text-lg font-bold">
+              <el-button @click="calcu" class="text-lg font-bold">计算</el-button>
             </div>
           </div>
         </div>
@@ -51,35 +43,29 @@
         <div class="h-[95%] w-[98%] border-t-0 border-2 pt--1">
           <el-divider content-position="left">结果模块</el-divider>
           <div class="h-[95%] w-full p-2">
-            <div class="w-[60%] h-[10%] pl-20 flex justify-between">
+            <div class="w-[90%] h-[10%] pl-20 flex justify-between">
               <div class="text-2xl">链路冗余(dB):</div>
-              <div class="bg-stone-50 text-2xl pl-2 w-1/3">
-                {{ state.redundancy }}
-              </div>
+              <div class="bg-stone-50 text-2xl pl-2 w-2/5">{{ state.redundancy }}</div>
             </div>
-            <div class="w-[90%] h-[90%] p-5">
-              <component
-                ref="mainChart"
-                :is="Echart"
-                class="h-full w-full"
-              />
+            <div class="w-[90%] h-[90%] p-3">
+              <component ref="mainChart" :is="Echart" class="h-full w-full" />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="h-[99%] w-[35%] flex flex-col p-1">
+    <div class="h-[99%] w-[40%] flex flex-col p-1">
       <div class="w-[99%] h-[99%] pt-1">
         <div class="w-[99%] h-[98%] border-t-0 border-2 pt--1">
           <el-divider content-position="left">参数输入</el-divider>
           <div
-            class="flex-col w-[99%] h-[7%] p-2 overflow-auto"
+            class="flex-col w-[99%] h-[7%] p-1 overflow-auto"
             :key="item.name"
             v-for="item in full_para.filter((items) => items.group == 'third')"
           >
-            <div class="flex w-full pl-2 overflow-hidden">
+            <div class="flex w-full pl-3">
               <div class="w-[50%] text-lg font-bold">{{ item.label }}</div>
-              <div class="w-[30%]">
+              <div class="w-[30%] h-5">
                 <component
                   class="w-full"
                   v-model="state.para[item.name]"
@@ -94,7 +80,7 @@
                   ></el-option>
                 </component>
               </div>
-              <div class="w-[20%] pl-3">{{ item.unit }}</div>
+              <div class="w-[20%] text-lg pl-3">{{ item.unit }}</div>
             </div>
           </div>
         </div>
@@ -110,8 +96,8 @@
             v-for="item in full_para.filter((items) => items.group == 'fourth')"
           >
             <div class="py-1 flex w-full pl-4 overflow-hidden">
-              <div class="w-[50%] text-lg font-bold">{{ item.label }}:</div>
-              <div class="w-[30%] pl-3">
+              <div class="w-[60%] text-lg font-bold">{{ item.label }}:</div>
+              <div class="w-[35%] pl-3">
                 <component
                   class="w-full"
                   v-model="state.para[item.name]"
@@ -126,7 +112,6 @@
                   ></el-option>
                 </component>
               </div>
-              <div class="w-[20%]">{{ item.unit }}</div>
             </div>
           </div>
         </div>
@@ -143,7 +128,7 @@ import { full_para } from "./interface";
 const mainChart = ref();
 const state = reactive({
   para: {} as any,
-  redundancy: 0,
+  redundancy: 0
 });
 
 const calcu = () => {
@@ -357,7 +342,7 @@ const data = [
   [0.833735, 4.374394],
   [0.070095, 3.213817],
   [0.52707, 3.952681],
-  [0.116163, 3.129283],
+  [0.116163, 3.129283]
 ];
 
 const data2 = [
@@ -373,7 +358,7 @@ const data2 = [
   [0.138306, 4.58664],
   [0.247809, 3.476346],
   [0.64827, 3.585821],
-  [0.731209, 4.282233],
+  [0.731209, 4.282233]
 ];
 onMounted(() => {
   paraInit(full_para);

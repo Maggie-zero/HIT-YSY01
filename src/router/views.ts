@@ -32,7 +32,7 @@ export default [
       type: "Production",
       isSideBar: true,
       title: '链路冗余评估组件',
-      icon: 'Iphone'
+      icon: 'Link'
     },
     redirect: { path: '/link' },
     children: [
@@ -56,7 +56,7 @@ export default [
       type: "Production",
       isSideBar: true,
       title: '链路场景评估组件',
-      icon: 'Iphone'
+      icon: 'Position'
     },
     redirect: { path: '/link2' },
     children: [

@@ -23,9 +23,9 @@ export const optionsGen = (data: any) => {
       name: '链路冗余（dB）',
       nameLocation: "middle",
       nameTextStyle: {
-        fontSize: 18,
+        fontSize: 12,
         fontFamily: "serif",
-        lineHeight: 35,
+        lineHeight: 20,
         fontWeight: 800,
         color: "#000000"
       },
